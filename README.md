@@ -1,1 +1,1 @@
-# dsa-go
+# [Estrutura de dados em GoLang (DSA in Go)](https://www.youtube.com/playlist?list=PLm-xZWCprwYTEKad8bM1H0kxHxDMlzXeO)
