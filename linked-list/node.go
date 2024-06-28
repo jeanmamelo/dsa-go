@@ -14,37 +14,28 @@ func (n *Node) printNodes() {
 		fmt.Print(current.data, " -> ")
 		current = current.next
 	}
-	fmt.Print(nil)
+	fmt.Print("nil\n")
 }
 
-func (n *Node) printLength() {
+func (n *Node) findLength() int {
 	current := n
 	length := 0
 	for current != nil {
 		current = current.next
 		length++
 	}
-	fmt.Print("\nLength: ", length)
+	return length
 }
 
 func main() {
 	myLinkedList := &Node{
 		data: "Jean",
 		next: &Node{
-			data: "Marcos",
-			next: &Node{
-				data: "Albino",
-				next: &Node{
-					data: "de",
-					next: &Node{
-						data: "Melo",
-						next: nil,
-					},
-				},
-			},
+			data: "Melo",
+			next: nil,
 		},
 	}
 
 	myLinkedList.printNodes()
-	myLinkedList.printLength()
+	fmt.Print("Length: ", myLinkedList.findLength())
 }
