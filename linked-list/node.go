@@ -7,8 +7,8 @@ type Node struct {
 	next *Node
 }
 
-func printNodes(nodes *Node) {
-	current := nodes
+func (n *Node) printNodes() {
+	current := n
 	fmt.Print("Nodes: ")
 	for current != nil {
 		fmt.Print(current.data, " -> ")
@@ -17,8 +17,8 @@ func printNodes(nodes *Node) {
 	fmt.Print(nil)
 }
 
-func printLength(nodes *Node) {
-	current := nodes
+func (n *Node) printLength() {
+	current := n
 	length := 0
 	for current != nil {
 		current = current.next
@@ -45,6 +45,6 @@ func main() {
 		},
 	}
 
-	printNodes(myLinkedList)
-	printLength(myLinkedList)
+	myLinkedList.printNodes()
+	myLinkedList.printLength()
 }
